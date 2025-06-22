@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polygon Size Comparison</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw-src.css" integrity="sha512-vJfMKRRm4c4UupyPwGUZI8U651mSzbmmPgR3sdE3LcwBPsdGeARvUM5EcSTg34DK8YIRiIo+oJwNfZPMKEQyug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="header">
+        <h1>🗺️ Polygon Size Comparison</h1>
+        <p>Draw a polygon on the left map, then drag it around on the right map to compare sizes</p>
+    </div>
+    
+    <div class="container">
+        <div class="map-section">
+            <div class="map-title">✏️ Drawing Map</div>
+            <div id="drawMap" class="map"></div>
+            <div class="info-panel">
+                <strong>Instructions:</strong> Use the polygon or line tools to draw shapes. They will automatically appear on the comparison map.
+            </div>
+        </div>
+        
+        <div class="map-section">
+            <div class="map-title">🔄 Comparison Map</div>
+            <div id="compareMap" class="map"></div>
+            <div class="controls">
+                <button class="btn" onclick="clearPolygons()">Clear All</button>
+                <button class="btn" onclick="centerMaps()">Reset View</button>
+            </div>
+            <div class="info-panel">
+                <strong>Drag the shape</strong> to different locations to see how its size compares across the world.
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js" integrity="sha512-ozq8xQKq6urvuU6jNgkfqAmT7jKN2XumbrX1JiB3TnF7tI48DPI4Gy1GXKD/V3EExgAs1V+pRO7vwtS1LHg0Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
